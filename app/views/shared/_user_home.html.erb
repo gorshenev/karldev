@@ -1,0 +1,19 @@
+<h1><%= @user.name %>
+<small><%= @user.email %></small></h1>
+
+<%= link_to "Создать мероприятие", new_event_path, class: "btn btn-lg btn-success" %>
+
+<% if @upcoming_events.any? %>
+<h2>Будущие мероприятия:</h2>
+<%= render 'shared/table', object: @upcoming_events %>
+<% end %>
+
+<% if @previous_events.any? %>
+<h2>Вы посетили:</h2>
+<%= render 'shared/table', object: @previous_events %>
+<% end %>
+
+<% if @user.events.any? %>
+<h2>Вы создали</h2>
+<%= render 'shared/table', object: @user.events %>
+<% end %>
