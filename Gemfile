@@ -81,3 +81,10 @@ gem 'wmd-rails'
 gem 'mail_form'
 gem 'simple_form'
 
+
+
+gem "wysiwyg-rails"
+
+gem 'bootstrap-wysihtml5-rails', :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
+
+gem 'bootsy'

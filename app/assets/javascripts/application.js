@@ -18,10 +18,13 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require bootsy
 
+//= require bootstrap-wysihtml5
+//= require bootstrap-wysihtml5/locales/ru-RU
+//= require froala_editor.min.js
 
-
-
+//= require tinymce-jquery
 
 
 //= require jquery.rest

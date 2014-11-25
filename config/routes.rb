@@ -1,9 +1,12 @@
 PrivateEvents::Application.routes.draw do
 
-<<<<<<< HEAD
-=======
 
->>>>>>> FETCH_HEAD
+
+
+
+
+
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   resources :specialities
 
   mount RailsAdmin::Engine => '//admin', as: 'rails_admin'
@@ -49,9 +52,9 @@ PrivateEvents::Application.routes.draw do
 
   get '/calendar', to: 'calendar#index'
 
-  get "/home", to: "pages#home", as: "home"
+ # get "/home", to: "pages#home", as: "home"
   get "/geocoding", to: "pages#geocoding", as: "geocoding"
-  get "/reverse_geocoding", to: "pages#reverse_geocoding", as: "reverse_geocoding"
+#  get "/reverse_geocoding", to: "pages#reverse_geocoding", as: "reverse_geocoding"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
