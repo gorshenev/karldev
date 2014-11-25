@@ -36,11 +36,14 @@ gem 'bootstrap_form'
 
 group :development do
   gem 'sqlite3', '1.3.8'
+  gem "guard-minitest"
+  gem "minitest-reporters"
 end
 
 group :production do
   gem 'pg', '~> 0.17.1'
   gem 'rails_12factor', '~> 0.0.2'
+
 end
 
 gem 'faker', '~> 1.3.0'
@@ -83,8 +86,13 @@ gem 'simple_form'
 
 
 
-gem "wysiwyg-rails"
 
-gem 'bootstrap-wysihtml5-rails', :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
+gem 'summernote-rails'
+gem 'codemirror-rails'
+gem 'jquery-turbolinks'
+
+#gem "wysiwyg-rails"
+
+#gem 'bootstrap-wysihtml5-rails', :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
 
 gem 'bootsy'

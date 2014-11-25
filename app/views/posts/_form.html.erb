@@ -5,7 +5,7 @@
 	</div>
 	<div class="field">
   	<%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: 'summernote' %>
     <div style="display:none;">
     	<input type="text" name="post[body]" id="post_body">
     </div>
@@ -17,11 +17,29 @@
 	<div id="body-preview"></div>
 <% end %>
 
-<script type="text/javascript">
-  setup_wmd({
-    input: 	 "post_raw_markdown",
-    preview: "body-preview",
-    output:  "post_body"
-  });
-</script>
+<%= simple_form_for(@post) do |f| %>
+    <% if @post.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+          <ul>
+            <% @post.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.input :title, input_html: { class: 'form-control'} %>
+    </div>
+    <div class="form-group">
+      <%= f.input :body, class: 'summernote' %>
+    </div>
+    <div class="actions">
+      <%= f.submit class: 'btn btn-default' %>
+      <%= link_to 'Show', @post, class: 'btn btn-default' if @post.persisted? %>
+      <%= link_to 'Back', posts_path, class: 'btn btn-default' %>
+    </div>
+<% end %>
 
