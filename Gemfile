@@ -79,7 +79,7 @@ gem 'jquery-rest-rails'
 
 gem 'font-awesome-sass'
 
-gem 'wmd-rails'
+#gem 'wmd-rails'
 
 gem 'mail_form'
 gem 'simple_form'
@@ -95,4 +95,8 @@ gem 'jquery-turbolinks'
 
 #gem 'bootstrap-wysihtml5-rails', :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
 
-gem 'bootsy'
+#gem 'bootsy'
+
+
+gem 'therubyracer'
+gem 'execjs'

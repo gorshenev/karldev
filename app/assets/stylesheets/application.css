@@ -9,16 +9,18 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require bootsy
+
 
 
  *= require font-awesome
 
  *= require fullcalendar
- *= require 'wmd/wmd'
- *= require_tree .
  *= require rails_bootstrap_forms
+ *= require_tree .
+
 */
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "redactor-rails";
+@import "summernote";
+@import "codemirror";
+@import "codemirror/themes/solarized";

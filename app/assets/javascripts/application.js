@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require fullcalendar
+
 //= require turbolinks
 
 //= require moment
@@ -18,14 +19,14 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require bootsy
 
 
 
 
-//= require jquery
+
+
 //= require jquery.turbolinks
-//= require jquery_ujs
+
 //= require bootstrap
 //= require codemirror
 //= require codemirror/modes/ruby
@@ -47,9 +48,9 @@
 //= require summernote
 //= require lang/summernote-ru-RU
 
-//= require turbolinks
 
-//= require tinymce-jquery
+
+
 
 
 //= require jquery.rest

@@ -1,12 +1,6 @@
 PrivateEvents::Application.routes.draw do
 
 
-
-
-
-
-
-  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   resources :specialities
 
   mount RailsAdmin::Engine => '//admin', as: 'rails_admin'
