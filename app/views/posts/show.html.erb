@@ -1,7 +1,14 @@
+
+
+
 <h1 class="post_title"><%= @post.title %></h1>
 
 <div class="post_body">
-	<%= @post.body.html_safe %>
+
+  <%=raw @post.body %>
 </div>
 
+<div class='actions'>
+<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-default' %>
 <%= link_to 'Назад', posts_path %>
+</div>

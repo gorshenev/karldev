@@ -6,7 +6,7 @@ $ ->
 
   # to set summernote object
   # You should change '#post_content' to your textarea input id
-  summer_note = $('#post_content')
+  summer_note = $('#post_body')
 
   # to call summernote editor
   summer_note.summernote
