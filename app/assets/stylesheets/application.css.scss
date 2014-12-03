@@ -1,12 +1,17 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
+/*@import 'components/filterrific_filter';*/
 @import "bootstrap";
 @import "font-awesome";
 @import "summernote";
 @import "codemirror";
 @import "codemirror/themes/solarized";
 @import "posts";
+@import 'components/filterrific_filter';
+@import 'components/chardinjs_overrides.css';
+
+@import 'chardinjs.css';
+@import 'bootstrap-datepicker3.css';
 
 
 body {padding: 3em 0;}

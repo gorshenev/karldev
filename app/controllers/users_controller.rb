@@ -16,12 +16,18 @@ class UsersController < ApplicationController
   end
 
   def show
+
     @user = User.find(params[:id])
 
     @previous_events = @user.previous_events
     @upcoming_events = @user.upcoming_events
+    @speciality_events = @user.speciality.name
+
 
   end
+
+
+
 
   def edit
     @user = User.find(params[:id])
@@ -48,7 +54,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-        params.require(:user).permit(:name, :email)
+        params.require(:user).permit(:name, :email, :speciality_id, :birthdate, :phone, :company, :post, :city, :country, :region, :info)
     end
 
 end

@@ -1,4 +1,4 @@
-<%= form_for(@news) do |f| %>
+<%= bootstrap_form_for (@news) do |f| %>
   <% if @news.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@news.errors.count, "error") %> prohibited this news from being saved:</h2>
@@ -11,15 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, class: 'summernote' %>
+    <div class="form-group">
+      <%= f.label :Название %>
+      <%= f.text_field :title, input_html: { class: 'form-control'}, hide_label: true %>
+    </div>
+    <div class="form-group">
+      <%= f.label :Описание %>
 
-  </div>
+      <%= f.text_field :description, class:'summernote', hide_label: true %>
+    </div>
   <div class="actions">
     <%= f.submit %>
   </div>

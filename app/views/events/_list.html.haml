@@ -1,0 +1,22 @@
+.well.well-small
+  .pull-right{ :'data-position' => 'bottom', :'data-intro' => 'Reset the filter settings to defaults.' }
+    = link_to "Reset filters", reset_filterrific_events_path, :class => 'btn btn-default btn-sm'
+  .chardin_box{ :'data-position' => 'bottom', :'data-intro' => "will_paginate's entries info works as expected." }
+
+  .chardin_box{ :'data-position' => 'bottom', :'data-intro' => 'Spinner indicates update.' }
+    = render_filterrific_spinner
+
+%table.table
+  %tr
+    %th Name
+    %th Email
+    %th Country
+    %th Registered at
+  - events.each do |event|
+    %tr
+      %td= event.title
+      %td= event.location
+      %td= event.speciality_id
+      %td= event.created_at.to_date.to_s(:long)
+
+.chardin_box{ :'data-position' => 'top', :'data-intro' => "will_paginate's paginator works as expected." }

@@ -3,7 +3,7 @@
 <%=  bootstrap_form_for @user, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10" do |f| %>
   <%= f.text_field :name %>
   <%= f.email_field :email %>
-    <%= f.text_field :napravlenie %>
+    <%= f.select :specialities_id, options_from_collection_for_select(Speciality.all, 'id', 'name', f.object.specialities_id), include_blank: false %>
     <%= f.label :Пароль %>
     <%= f.password_field :password, class: 'form-control' %>
     <%= f.label :password_confirmation, "Подтвердите пароль" %>

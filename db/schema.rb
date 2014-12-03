@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125002335) do
+ActiveRecord::Schema.define(version: 20141203073440) do
 
   create_table "bootsy_image_galleries", force: true do |t|
     t.integer  "bootsy_resource_id"
@@ -39,14 +39,17 @@ ActiveRecord::Schema.define(version: 20141125002335) do
     t.datetime "ends_at"
     t.boolean  "all_day"
     t.string   "color"
-    t.integer  "specialities_name"
+    t.integer  "speciality_id"
+    t.integer  "specialities_id"
   end
 
   add_index "events", ["all_day"], name: "index_events_on_all_day"
   add_index "events", ["color"], name: "index_events_on_color"
   add_index "events", ["creator_id"], name: "index_events_on_creator_id"
   add_index "events", ["ends_at"], name: "index_events_on_ends_at"
-  add_index "events", ["specialities_name"], name: "index_events_on_specialities_name"
+  add_index "events", ["location"], name: "index_events_on_location"
+  add_index "events", ["specialities_id"], name: "index_events_on_specialities_id"
+  add_index "events", ["speciality_id"], name: "index_events_on_speciality_id"
   add_index "events", ["starts_at"], name: "index_events_on_starts_at"
 
   create_table "friendly_id_slugs", force: true do |t|
@@ -148,6 +151,8 @@ ActiveRecord::Schema.define(version: 20141125002335) do
     t.string   "country"
     t.string   "region"
     t.string   "info"
+    t.integer  "specialities_id"
+    t.integer  "speciality_id"
   end
 
   add_index "users", ["birthdate"], name: "index_users_on_birthdate"
@@ -161,5 +166,7 @@ ActiveRecord::Schema.define(version: 20141125002335) do
   add_index "users", ["post"], name: "index_users_on_post"
   add_index "users", ["region"], name: "index_users_on_region"
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+  add_index "users", ["specialities_id"], name: "index_users_on_specialities_id"
+  add_index "users", ["speciality_id"], name: "index_users_on_speciality_id"
 
 end

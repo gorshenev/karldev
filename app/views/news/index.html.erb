@@ -9,8 +9,8 @@
   												
 		<%= news.date %><br>
     <h2>  <b>  <%= news.title %></b></h2><br>
-		<%= truncate(news.description, :length => 270) %><br>
-     <!--   <%= news.description %><br>-->
+        <%= news.description.slice(0,500).html_safe +
+                    (news.description.length > 500 ? '...' : '') %><br><br>
 
         <%= link_to "Полностью", news, class: "btn btn-default" %>
         

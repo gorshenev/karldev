@@ -10,6 +10,8 @@ class EventsController < ApplicationController
       end
   end
 
+
+
   def create
     @event = current_user.events.build(event_params)
     if @event.save
@@ -45,13 +47,25 @@ class EventsController < ApplicationController
   end
 
   def index
+
+    @events = Event.where("location = ?", params[:location])
+    @filterrific = Filterrific.new(
+        Event,
+        params[:filterrific] || session[:filterrific_events]
+    )
+    @events = Event.filterrific_find(@filterrific).page(params[:page])
+    session[:filterrific_events] = @filterrific.to_hash
+
     # @events = Event.paginate(page: params[:page]).per_page(10)
     @events_upcoming = Event.upcoming.paginate(page: params[:upcoming])
     @events_past = Event.past.paginate(page: params[:past])
+
+
     @events = Event.scoped
     @events = Event.between(params['start'], params['end']) if (params['start'] && params['end'])
     respond_to do |format|
       format.html # index.html.erb
+      format.js
       format.json { render :json => @events }
     end
   end
@@ -83,6 +97,12 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url }
       format.json { head :no_content }
     end
+  end
+
+
+  def reset_filterrific
+    session[:filterrific_events] = nil
+    redirect_to :action => :index
   end
 
 

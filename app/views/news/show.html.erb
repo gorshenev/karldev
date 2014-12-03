@@ -7,28 +7,9 @@
 </p>
 
 <div class="row">
-  <div class="col-md-8"><%= @news.description %></div>
+  <div class="col-md-8"><%=raw @news.description %></div>
   <div class="col-md-4">
-    <header class="main-box-header clearfix">
-      <center> <h2>Новости</h2></center>
-    </header>
-    <div class="main-box-body clearfix">
-      <div class="well">
-        <u>
 
-
-
-          <%=   @recentnews = News.all(:order => 'created_at DESC') %>
-
-
-
-
-
-        </u>
-
-
-      </div>
-      </div>
 
 
   </div>

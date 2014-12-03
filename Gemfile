@@ -100,3 +100,9 @@ gem 'jquery-turbolinks'
 
 gem 'therubyracer'
 gem 'execjs'
+
+
+gem 'filterrific'
+gem 'bootstrap-datepicker-rails'
+gem 'chardinjs-rails'
+gem 'will_paginate-bootstrap'

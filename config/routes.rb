@@ -1,6 +1,12 @@
 PrivateEvents::Application.routes.draw do
 
 
+  resources :events do
+    collection do
+      get :reset_filterrific
+    end
+  end
+
   resources :specialities
 
   mount RailsAdmin::Engine => '//admin', as: 'rails_admin'

@@ -28,4 +28,5 @@ en:
     #     age: 'Rather not say'
     # prompts:
     #   defaults:
-    #     age: 'Select your age'
+
+  event: "event"#     age: 'Select your age'

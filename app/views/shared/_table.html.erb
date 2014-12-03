@@ -14,10 +14,11 @@
     <td><%= event.date %></td>
     <td><%= link_to event.title, event_path(event) %></td>
     <td><%= event.location %></td>
-    <td><%= link_to event.creator.name, user_path(event.creator) %></td>
+    <td><%= link_to event.creator.name, user_path(event.creator) %> </td>
 
     <td class="text-center"><%= link_to event.attendees.count, event_path(event) %></td>
   </tr>
+      <%=   @events_speciality   %>
 
   <% end %>   
 </table>

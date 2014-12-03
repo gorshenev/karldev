@@ -1,6 +1,6 @@
 html, body {
     color: #666666;
-    font-size: 13px;
+   /* font-size: 13px;*/
     line-height: 28px;
     background: #fff;
     font-family: 'Open Sans', sans-serif;
@@ -401,7 +401,7 @@ blockquote.pull-right:before {
 	float: left;
 	display: block;
 	margin-right: 3px;
-	font-size: em;
+	font-size: 1.0em;
 }
 #header-nav .form-control {
 	border-radius: 0;

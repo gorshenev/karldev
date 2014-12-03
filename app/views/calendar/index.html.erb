@@ -1,6 +1,71 @@
-<h1>Календарь мероприятий</h1>
+
+
+
+<div class="row">
+  <div class="col-lg-12">
+
+
+        <h1>Календарь мероприятий</h1>
+
+
+
+    <%= @events_speciality %>
+
+
+
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab-home" data-toggle="tab">Москва</a></li>
+            <li ><a href="#tab-help" data-toggle="tab">Санкт-Петербург</a></li>
+
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane fade in active" id="tab-home">
+              <div id="calendarm"></div>
+            </div>
+            <div class="tab-pane fade" id="tab-help">
+              <div id="calendarp"></div>
+            </div>
+
+          </div>
 
 
 
 
-<div id='calendar'></div>
+  </div>
+</div>
+
+
+
+
+<%= form_tag("/search", method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+<% end %>
+<%= check_box_tag(:pet_dog) %>
+<%= label_tag(:pet_dog, "I own a dog") %>
+<%= check_box_tag(:pet_cat) %>
+<%= label_tag(:pet_cat, "I own a cat") %>
+<%= radio_button_tag(:age, "child") %>
+<%= label_tag(:age_child, "I am younger than 21") %>
+<%= radio_button_tag(:age, "adult") %>
+<%= label_tag(:age_adult, "I'm over 21") %>
+
+
+<%= text_area_tag(:message, "Hi, nice site", size: "24x6") %>
+<%= password_field_tag(:password) %>
+<%= hidden_field_tag(:parent_id, "5") %>
+<%= search_field(:user, :name) %>
+<%= telephone_field(:user, :phone) %>
+<%= date_field(:user, :born_on) %>
+<%= datetime_field(:user, :meeting_time) %>
+<%= datetime_local_field(:user, :graduation_day) %>
+<%= month_field(:user, :birthday_month) %>
+<%= week_field(:user, :birthday_week) %>
+<%= url_field(:user, :homepage) %>
+<%= email_field(:user, :address) %>
+<%= color_field(:user, :favorite_color) %>
+<%= time_field(:task, :started_at) %>
+<%= number_field(:product, :price, in: 1.0..20.0, step: 0.5) %>
+<%= range_field(:product, :discount, in: 1..100) %>

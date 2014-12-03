@@ -15,15 +15,18 @@
 
 
 //= require jquery
-
-
-
-
-
-
-
 //= require jquery.turbolinks
 //= require jquery_ujs
+
+
+
+//= require bootstrap-datepicker
+//= require filterrific/filterrific-jquery
+//= require chardinjs
+
+
+
+
 
 //= require bootstrap
 //= require codemirror

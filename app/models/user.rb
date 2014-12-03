@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
 
   has_many :invites, :foreign_key => :attendee_id
   has_many :attended_events, :through => :invites
-
+  belongs_to :speciality
+  has_many :events, :foreign_key => :speciality_id
 
   before_create :create_remember_token
 

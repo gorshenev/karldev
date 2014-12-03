@@ -5,49 +5,51 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
+    <%= bootstrap_form_for (@user) do |f| %>
 
 
         <%= f.label :Имя %>
-        <%= f.text_field :name, class: 'form-control' %>
+        <%= f.text_field :name, hide_label: true %>
 
         <%= f.label :email %>
-        <%= f.text_field :email, class: 'form-control' %>
+        <%= f.email_field :email, hide_label: true %>
 
         <%= f.label :Пароль %>
-        <%= f.password_field :password, class: 'form-control' %>
+        <%= f.password_field :password, hide_label: true %>
 
         <%= f.label :password_confirmation, "Подтвердите пароль" %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
+        <%= f.password_field :password_confirmation, hide_label: true %>
 
-        <%= f.label :Направление %>
-        <%= f.text_field :napravlenie, class: 'form-control' %>
+        <%= f.label :Направление %><br>
+        <%= f.select :speciality_id, options_from_collection_for_select(Speciality.all, 'id', 'name', f.object.speciality_id), include_blank: false, hide_label: true %>
 
+<br>
         <%= f.label :Дата_рождения %>
-        <%= f.date_field :birthdate, class: 'form-control' %>
+        <%= f.date_field :birthdate, hide_label: true %>
 
         <%= f.label :Телефон %>
-        <%= f.phone_field :phone, class: 'form-control' %>
+        <%= f.phone_field :phone, hide_label: true %>
 
         <%= f.label :Компания %>
-        <%= f.text_field :company, class: 'form-control' %>
+        <%= f.text_field :company, hide_label: true %>
 
         <%= f.label :Должность %>
-        <%= f.text_field :post, class: 'form-control' %>
+        <%= f.text_field :post, hide_label: true %>
 
         <%= f.label :Город %>
-        <%= f.text_field :city, class: 'form-control' %>
+        <%= f.text_field :city, hide_label: true %>
 
         <%= f.label :Страна %>
-        <%= f.text_field :country, class: 'form-control' %>
+        <%= f.text_field :country, hide_label: true %>
 
         <%= f.label :Область %>
-        <%= f.text_field :region, class: 'form-control' %>
+        <%= f.text_field :region, hide_label: true %>
 
         <%= f.label :Хотели_ли_бы_Вы_получать_дополнительную_информацию %>
-        <%= f.text_field :info, class: 'form-control' %>
-
+        <%= f.text_field :info, hide_label: true %>
+        <div class="actions">
         <%= f.submit "Сохранить изменения", class: "btn btn-primary" %>
+        </div>
     <% end %>
 
 

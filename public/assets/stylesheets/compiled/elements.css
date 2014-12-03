@@ -126,16 +126,16 @@ h3 .small {
 	border: none;
 }
 .btn-primary {
-	background-color: #3498db;
-	border-color: #2980b9;
+	background-color: #074089;
+	border-color: rgba(20, 36, 128, 0.59);
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active, 
 .open .dropdown-toggle.btn-primary {
-	background-color: #2980b9;
-	border-color: #1c5c87;
+	background-color: #989898;
+	border-color: rgba(128, 128, 128, 0.59);
 }
 .btn-success {
 	background-color: #2ecc71;
@@ -1144,7 +1144,7 @@ input[type="radio"] {
 }
 .infographic-box .headline {
 	display: block;
-	font-size: 1.2em;
+/*	font-size: 1.2em;*/
 	font-weight: 300;
 	text-align: right;
 }
